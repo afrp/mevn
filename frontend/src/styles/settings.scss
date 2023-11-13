@@ -1,0 +1,154 @@
+/**
+ * src/styles/settings.scss
+ *
+ * Configures SASS variables and Vuetify overwrites
+ */
+
+// https://vuetifyjs.com/features/sass-variables/`
+
+@import './fonts.scss';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$color-primary: #000037;
+$color-secondary: #5B6591;
+
+// @use 'vuetify/settings' with (
+//   $color-primary: $color-primary
+// );
+
+body {
+    font-family: 'Open Sans';
+}
+
+.container-fit{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background-color: #FFFFFF;
+    overflow: hidden;
+}
+
+.title-md, .title-sm, .subtitle-md{
+    letter-spacing: 0px;
+    color: #000037;    
+}
+
+.title-md{
+    font: normal normal 800 36px/40px 'Open Sans';    
+}
+
+.title-sm{
+    font: normal normal bold 24px/29px 'Open Sans';
+}
+.subtitle-md{
+    font: normal normal 600 24px/28px 'Open Sans';
+}
+.input-wrap{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;    
+    position: relative;
+    .icon-input{
+        position: absolute;
+        right: 5px;
+        bottom: 11px;
+        width: 29px;
+        height: 29px;
+        cursor: pointer;
+    }
+}
+.form-control, .form-control:focus, .form-control:active{
+    width: 100%;
+    height: 49px;
+    border: 1px solid #888FB0;
+    border-radius: 4px;
+    padding: 10px 12px;
+    font: normal normal 400 24px/28px 'Open Sans';
+    letter-spacing: 0px;
+    color: #888FB0;
+    box-shadow: none !important;
+    outline: none !important;    
+    &.password{
+        padding-right: 26px;
+    }
+}
+.checkbox-label{
+    font: normal normal 400 20px/28px 'Open Sans';
+    color: $color-secondary;
+    margin-left: 16px;
+    &.dark{
+        color: $color-primary;
+    }
+    b{
+        color: #0796E5;
+    }
+}
+.v-label{
+    opacity: 1 !important;
+}
+.v-selection-control__wrapper {
+    width: 24px !important;
+    height: 24px !important;
+}
+.v-input__details{
+    display: none !important;
+}
+.btn-primary{
+    width: 100%;
+    min-height: 53px;        
+    border: none;
+    background: #EC4B5A 0% 0% no-repeat padding-box !important;
+    border-radius: 8px;
+    padding: 12px 32px;
+    font: normal normal bold 24px/29px 'Open Sans';
+    letter-spacing: 0px;
+    color: #FFFFFF !important;
+    text-transform: capitalize;
+    &.fit{
+        width: fit-content;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .title-md{
+        font: normal normal 800 24px/28px 'Open Sans';    
+    }
+    
+    .title-sm{
+        font: normal normal bold 16px/22px 'Open Sans';
+    }
+    .subtitle-md{
+        font: normal normal 600 14px/18px 'Open Sans';
+    }
+    .input-wrap{        
+        gap: 6px;    
+        .icon-input{            
+            right: 6px;
+            bottom: 9px;
+            width: 17px;
+            height: 17px;         
+        }
+    }
+    .form-control, .form-control:focus, .form-control:active{        
+        font: normal normal 400 14px/18px 'Open Sans';        
+        height: 37px;
+    }
+    .checkbox-label{
+        font: normal normal 400 14px/18px 'Open Sans';        
+        margin-left: 12px;
+    }
+    .v-selection-control__wrapper {
+        width: 16px !important;
+        height: 16px !important;
+    }
+    .btn-primary{
+        font: normal normal bold 16px/22px 'Open Sans';        
+    }
+}
+
+
+
